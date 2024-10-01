@@ -1,16 +1,22 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   border: none;
 }
 body {
-  background-color: burlywood;
-   color: #03045e;
+  background-color: white;
+  color: #03045e;
   font-family: "Poppins";
 }
-header{
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* header styles */
+header {
   padding: 1rem 3rem;
+  background-color: dodgerblue;
 }
 nav {
   display: flex;
@@ -21,80 +27,94 @@ nav {
   display: flex;
   gap: 1rem;
 }
-.nav-item {
-  list-style: none;
-  cursor: pointer;
-  font-size: 18px;
+.nav-items li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
 }
-.icons{
+.nav-items li a:hover {
+  columns: #f9004d;
+  transition: 0.4s;
+}
+.nav-items li a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.icons {
   display: flex;
-  gap: .7rem;
+  gap: 0.7rem;
 }
 .icon img {
   width: 26px;
   height: 16px;
   cursor: pointer;
+  padding-right: 100px;
 }
 .fa-bars {
   display: none;
   cursor: pointer;
   font-size: 24px;
+  color: #03045e;
 }
-.hero-container{
+/* header styles */
+
+/* hero section styles */
+.hero-container {
+  padding: 1rem 3rem;
+  margin-top: 100px;
   display: flex;
-   padding: 0.9rem 2rem;
-   margin-top: 30px;
-   gap: 1.5rem;
+  gap: 1.5rem;
 }
 
 .title {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: left;
   gap: 1.2rem;
 }
-.title p{
-font-size: 28px;
+.title p {
+  font-size: 28px;
 }
-.title h1{
+.title h1 {
   font-size: 100px;
 }
-.title button{
-  width: 164px;
-  height: 68px;
+.title button {
+  padding: 15px 20px;
   border-radius: 10px;
-  background-color: #F7F197;
-
+  background-color: #f9004d;
+  max-width: fit-content;
 }
 .title button:hover {
   background-color: white;
   border: 1px solid dodgerblue;
   color: black;
 }
-
-
-.my-picture img{
-border-radius: 50%;
-height:493px ;
-width: 493px;
+.my-picture {
+  flex: 1;
 }
-.about h1{
-  width: 341px;
-  size: 100px;
-  padding-top: 100px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  margin: 10px;
-  color: #F7F197;
-
+.my-picture img {
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
 }
-.about p{
-   padding: 0.9rem 2rem;
-  margin-top: 30px;
-  justify-content: center;
-  font-size: 1.5rem;
-  
+/* hero section styles */
+
+.about h1 {
+  padding: 1rem 3rem;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  color: #f9004d;
+}
+.about p {
+  padding: 1rem 3rem;
+  color: black;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-top: 45px;
 }
 .skills-container {
   margin-top: 3rem;
@@ -104,10 +124,10 @@ width: 493px;
   justify-content: center;
   flex-direction: column;
 }
+/* skill styling */
 .skills-container h2 {
   margin-bottom: 1rem;
-  color: #F7F197;
- 
+  color: #f9004d;
 }
 .skill-lists {
   display: flex;
@@ -120,35 +140,64 @@ width: 493px;
   padding: 0.7rem 1rem;
   color: white;
 }
+/* skill styling */
+
 .work {
+  padding: 1rem 3rem;
   margin-top: 50px;
   padding: 20px 30px;
+  color: black;
 }
 .work h2 {
+  padding: 1rem 3rem;
   margin-bottom: 20px;
-  color:  #F7F197;
-;
+  color: #f9004d;
 }
-.my-skills {
+/* project syling */
+.project-container {
+  margin-top: 3rem;
+  padding: 0.9rem 2rem;
+}
+.projects {
+  display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  display: grid;
 }
-.my-skills h2 {
-  margin-top: 0.7rem;
+.project-container h2 {
+  text-align: center;
   margin-bottom: 0.7rem;
-  padding-left: 30px;
+  color: #f9004d;
 }
-.my-skills img {
-  max-width: 300px;
+.project {
+  width: 30%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+.project img {
+  max-width: 100%;
   height: auto;
-  padding-left: 30px;
-  
 }
-.my-skills p {
-  margin-bottom: 0.9rem;
-  padding: 20px 30px;
+.project-info {
+  padding: 0.5rem 0.9rem;
 }
+.project-info h3 {
+  margin-bottom: 0.4rem;
+}
+.tools-links {
+  padding: 0.5rem 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tools {
+  display: flex;
+  gap: 0.4rem;
+}
+.tool {
+  list-style: none;
+}
+/* project syling */
+
+/* contact styling */
 .contact-container {
   min-height: 30vh;
 }
@@ -160,7 +209,6 @@ width: 493px;
 }
 .contact-content h2 {
   margin: 4rem 0 2rem;
-  color: #F7F197;
 }
 .form {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
@@ -177,10 +225,10 @@ width: 493px;
 
 .form button {
   padding: 10px 15px;
-  background-color: #F7F197;
+  background-color: dodgerblue;
   border: none;
   border-radius: 5px;
-  color: #03045e;
+  color: white;
   cursor: pointer;
 }
 .form button:hover {
@@ -188,30 +236,89 @@ width: 493px;
   border: 1px solid dodgerblue;
   color: black;
 }
-.my-skills h2 {
-  display: flex;
-  justify-content: center;
-  color: #F7F197;
+/* contact styling */
+
+/* footer styles */
+.footer-container {
+  margin-top: 50px;
+  padding: 0.9rem 2rem;
+  background-color: dodgerblue;
 }
+.footer-content {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content h1 {
+  font-size: 1.3rem;
+}
+.social-icons {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 1.2rem;
+}
+/* footer styles */
 
 /*media queries  */
-@media (max-width: 600px) {
-  header {
-    padding: 1rem 1.5rem;
+
+@media (max-width: 991px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .icons,
+  .title {
+    text-align: center;
+  }
+  .title button {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .fa-bars {
+    display: block;
+  }
   .nav-items {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .title h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 350px) {
+  .project {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .skill-lists {
+    flex-wrap: wrap;
+  }
+  .project {
+    width: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+  .nav-item {
     display: none;
   }
   .fa-bars {
     display: block;
   }
+  .project {
+    width: 100%;
+  }
 }
-
-@media (max-width: 400px) {
-  nav h1,
-  .fa-bars {
-    font-size: 16px;
+@media (max-width: 330px) {
+  .contact-container {
+    margin: 1rem;
   }
 }
 /*media queries  */
