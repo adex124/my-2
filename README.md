@@ -10,7 +10,7 @@
 
 ### DEMO LINK
 
-[Adex-Portfolio](adex124.github.io/my-2/)
+[Adex-Portfolio](https://github.com/adex124/my-2)
 
 ### Author
 
